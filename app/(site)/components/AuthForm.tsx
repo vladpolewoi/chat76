@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from 'react'
 import { useForm, FieldValues, SubmitHandler } from 'react-hook-form'
+import axios from 'axios'
 
 import { BsGithub, BsGoogle } from 'react-icons/bs'
 
@@ -41,7 +42,7 @@ const AuthForm = () => {
     console.log('onSubmit', data)
 
     if (variant === 'REGISTER') {
-      // Axios Register
+      axios.post('/api/register', data)
     } else if (variant === 'LOGIN') {
       // Next Auth Login
     }
