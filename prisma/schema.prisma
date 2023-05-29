@@ -50,11 +50,11 @@ model Account {
 }
 
 model Conversation {
-  id              String   @id @default(auto()) @map("_id") @db.ObjectId
-  created_at      DateTime @default(now())
-  last_message_at DateTime @default(now())
-  name            String?
-  isGroup         Boolean?
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  created_at    DateTime @default(now())
+  lastMessageAt DateTime @default(now())
+  name          String?
+  isGroup       Boolean?
 
   messagesIds String[]  @db.ObjectId
   messages    Message[]
