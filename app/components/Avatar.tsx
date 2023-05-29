@@ -20,7 +20,7 @@ const Avatar: React.FC<AvatarProps> = ({ user }) => {
       md:w-11  
     "
       >
-        <Image alt="avatar" src={user?.image || '/images/avatarPlaceholder.png'} fill />
+        <Image alt="avatar" sizes="4" src={user?.image || '/images/avatarPlaceholder.png'} fill />
       </div>
       <span
         className="
