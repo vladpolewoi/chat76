@@ -9,6 +9,7 @@ import { useSession } from 'next-auth/react'
 import clsx from 'clsx'
 import useOtherUser from '@/app/hooks/useOtherUser'
 import Avatar from '@/app/components/Avatar'
+import AvatarGroup from '@/app/components/AvatarGroup'
 
 interface ConversationBoxProps {
   data: FullConversationType
@@ -77,7 +78,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({ data, selected }) => 
         selected ? 'bg-neutral-100' : 'bg-white',
       )}
     >
-      <Avatar user={otherUser} />
+      {data.isGroup ? <AvatarGroup users={data.users} /> : <Avatar user={otherUser} />}
       <div className="min-w-0 flex-1">
         <div className="focus:outline-none">
           <div className="mb-1 flex items-center justify-between">
