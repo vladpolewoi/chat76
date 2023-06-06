@@ -5,7 +5,7 @@ import { Fragment } from 'react'
 import { IoClose } from 'react-icons/io5'
 
 interface ModalProps {
-  isOpen: boolean
+  isOpen?: boolean
   children: React.ReactNode
   onClose: () => void
 }
